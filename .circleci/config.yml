@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Custom Domain
           command: echo "iotajapan.com" > dist/iotajapan/CNAME
-      - run: npm run deploy
+      - run: npx angular-cli-ghpages --dir='dist/iotajapan'
 
 workflows:
   version: 2
