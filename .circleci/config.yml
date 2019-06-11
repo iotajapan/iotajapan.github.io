@@ -41,11 +41,11 @@ jobs:
       - run: npm i
       - run: git config user.name $GITHUB_NAME  # GitHubのアカウント情報を設定
       - run: git config user.email $GITHUB_EMAIL
-      - run: ng build --prod --base-href="https://iotajapan.com/"
+      - run: npm run build
       - run:
           name: Custom Domain
           command: echo "iotajapan.com" > dist/iotajapan/CNAME
-      - run: npx angular-cli-ghpages --dir="dist/iotajapan"
+      - run: npm run deploy
 
 workflows:
   version: 2
