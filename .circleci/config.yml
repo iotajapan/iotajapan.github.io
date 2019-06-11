@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Custom Domain
           command: echo "iotajapan.com" > dist/iotajapan/CNAME
-      - run: npx angular-cli-ghpages --dir="dist/iotajapan" --message="chore: update [skip ci]"
+      - run: npx angular-cli-ghpages --dir="dist/iotajapan"
 
 workflows:
   version: 2
